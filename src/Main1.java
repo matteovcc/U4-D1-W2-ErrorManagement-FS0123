@@ -4,12 +4,6 @@ import java.util.Scanner;
 public class Main1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//		Random ran = new Random();
-//		int x = ran.nextInt(1)+10;
-//		
-//		System.out.println(x);
-		
 		//1 tentativo
 		
 		
@@ -71,6 +65,7 @@ public class Main1 {
 			int numRand = (int) (Math.random() * 10);
 			numbers[i] = numRand;
 		}
+		System.out.println(Arrays.toString(numbers));
 		
 		Scanner in = new Scanner(System.in);
 		boolean quit = false;
@@ -80,6 +75,9 @@ public class Main1 {
 			userNumber = in.nextInt();
 			if(userNumber == 0) {
 				quit = true;
+				System.out.println("Hai breakato");
+			}else if(userNumber > 10) {
+				System.out.println("NO !!! Inserisci numero da 1 a 10!!");
 			}else {
 				System.out.println("Scegli la posizione dell'array");
 				int position = in.nextInt();
@@ -89,7 +87,6 @@ public class Main1 {
 					System.out.println(Arrays.toString(numbers));
 				}catch(ArrayIndexOutOfBoundsException e){
 					System.out.println(e.getMessage());
-					
 				}
 			}
 		}while(!quit);
