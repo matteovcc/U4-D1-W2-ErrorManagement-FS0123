@@ -12,7 +12,7 @@ public class Main {
 			System.out.println("Saldo conto:" + conto1.restituisciSaldo());
 		}catch(BancaException e){
 			System.out.println("errore durante il prelievo" + e);
-//			e.printStackTrace();
+			e.printStackTrace();
 		}
 		
 		ContoOnline conto2 = new ContoOnline("Rossi Luigi", 50350.0,1500);
@@ -22,7 +22,7 @@ public class Main {
 			conto2.stampaSaldo();
 		}catch(BancaException e){
 			System.out.println("Errore durante il prelievo:" + e);
-//			e.printStackTrace();
+			e.printStackTrace();
 		}
 	}
 
