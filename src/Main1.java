@@ -66,5 +66,34 @@ public class Main1 {
 //		
 //		in.close();
 		
+		int[] numbers =  new int[5];
+		for (int i = 0;i <= numbers.length-1;i++) {
+			int numRand = (int) (Math.random() * 10);
+			numbers[i] = numRand;
+		}
+		
+		Scanner in = new Scanner(System.in);
+		boolean quit = false;
+		int userNumber = 0;
+		do {
+			System.out.println("Scegli numero da 1 a 10 o scegli 0 per breakare");
+			userNumber = in.nextInt();
+			if(userNumber == 0) {
+				quit = true;
+			}else {
+				System.out.println("Scegli la posizione dell'array");
+				int position = in.nextInt();
+				
+				try {
+					numbers[position - 1] = userNumber;
+					System.out.println(Arrays.toString(numbers));
+				}catch(ArrayIndexOutOfBoundsException e){
+					System.out.println(e.getMessage());
+					
+				}
+			}
+		}while(!quit);
+		in.close();
+		
 	}
 }

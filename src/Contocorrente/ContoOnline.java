@@ -1,5 +1,6 @@
 package Contocorrente;
 
+
 public class ContoOnline extends ContoCorrente {
 	double maxPrelievo;
 

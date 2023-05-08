@@ -1,5 +1,6 @@
 package Contocorrente;
 
+
 public class ContoCorrente {
 	String titolare;
 	int nMovimenti;
