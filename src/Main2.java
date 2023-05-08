@@ -11,14 +11,12 @@ public class Main2 {
 		int l = in.nextInt();
 		
 		try {
-			if(l > 0) {
 				System.out.println(km/l);
-			}
-		}catch(ArithmeticException e){
-			if(l == 0) {				
+			
+		}catch(ArithmeticException e){				
 			System.out.println(e.getMessage());
 			System.out.println("Non puoi dividere per 0");
-			}
+			
 		}finally {
 			in.close();
 		}
